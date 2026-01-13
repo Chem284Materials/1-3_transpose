@@ -25,9 +25,3 @@ mpiexec -n 4 ./build/transpose
 
 Note that there is an overhead cost associated with every point-to-point communication call you make.
 In order to achieve reasonable efficiency, ensure that your implementation does not make an excessive number of point-to-point communication calls; in particular, the complete set of all ranks should make no more than a total of `2 * world_size * world_size` point-to-point communication calls.
-
-After performing the point-to-point transpose, perform the same operation using a call to `MPI_Alltoall`.
-Time your point-to-point transpose as well as the MPI_Alltoall for several different numbers of ranks.
-Report your result below.
-
-## Answer

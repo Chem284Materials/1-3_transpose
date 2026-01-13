@@ -25,20 +25,16 @@ jobs:
 
       - name: Run the code on a single rank
         run: |
-          cd build
           mpiexec -n 1 ./build/transpose
 
       - name: Run the code on two MPI ranks
         run: |
-          cd build
           mpiexec -n 2 ./build/transpose
 
       - name: Run the code on three MPI ranks
         run: |
-          cd build
           mpiexec -n 3 ./build/transpose
 
       - name: Run the code on four MPI ranks
         run: |
-          cd build
           mpiexec -n 4 ./build/transpose
